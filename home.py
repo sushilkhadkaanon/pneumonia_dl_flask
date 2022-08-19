@@ -1,6 +1,6 @@
 
 
-
+import uvicorn
 from keras.models import model_from_json
 from flask import Flask, render_template, request
 import numpy as np
@@ -56,4 +56,4 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    uvicorn.run(app, debug=True)
