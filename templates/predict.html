@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/static/predict_css.css">
+  <link rel="stylesheet" type="text/css" href="../static/predict_css.css">
+  <title>PNEUMONIA PREDICTION</title>
+</head>
+
+<body>
+  <div id="body">
+
+
+    <p id="title">PNEUMONIA PREDICTION USING DEEP NEURAL NETWORKS</p>
+
+    <div class="images">&times;
+      <img id="img" src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="300" height="200">
+
+    </div>
+
+    <div id="image-viewer">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="full-image">
+    </div>
+
+    <h1 id="file_path" style="visibility:hidden">{{ file_path }}</h1>
+    <h1 id="pred" style="visibility:hidden">{{ result }}</h1>
+    
+    <h3 id="result"></h3>
+    <h4 id="desc" style="margin-top: 20px;"></h4>
+    <p id="subtitle" class="desc">Please do not fully rely on this prediction.</p>
+    <button id="return" class="custom-btn btn-6" style="margin-top:20px" onclick="return_page()"><span>Use another image</span></button>
+    <p class="desc" id="subtitle">I've used 13 layered Convolution Neural Network (CNN) and have achieved accuracy of around 90%. </p>
+  
+    <p class="desc"> You can find the source code for the AI model and web app here. </p>
+
+
+  </div>
+
+
+</body>
+
+  <script>
+
+
+    function codeAddress() {
+      var file_path = document.getElementById("file_path").innerHTML;
+      document.getElementById("img").setAttribute("src", file_path)
+
+      var result = document.getElementById("pred").innerHTML;
+      var desc = '';
+      if (result == "NORMAL") {
+        result = "NEGATIVE "
+        document.getElementById("result").style.color = "Green";
+        document.getElementById("result").style.fontStyle="bold";
+        document.getElementById("result").style.fontSize="40px";
+        desc = "No need to worry! You are not infected according to our model! However we recommend you consult a doctor.";
+      } else {
+        
+        result = "POSITIVE "
+        document.getElementById("result").style.color = "Red";
+        document.getElementById("result").style.fontStyle="Bold";
+        document.getElementById("result").style.fontSize="40px";
+        desc = "You are infected according to our model! However we recommend you consult a doctor. No need to worry! ";
+
+      }
+      document.getElementById("result").innerHTML = result;
+      document.getElementById("desc").innerHTML = desc;
+      console.log(file_path)
+
+
+      $(".images img").click(function () {
+      $("#full-image").attr("src", $(this).attr("src"));
+      $('#image-viewer').show();
+    });
+
+    $("#image-viewer .close").click(function () {
+      $('#image-viewer').hide();
+    });
+    }
+    window.onload = codeAddress;
+
+    function return_page(){
+      window.location = '/' ;
+
+    }
+
+
+
+  </script>
+
+
+</html>

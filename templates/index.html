@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PNEUMONIA PREDICTION</title>
+    <link rel="stylesheet" type="text/css" href="/static/index_css.css">
+  </head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <body  >
+    <div id="body">
+      <p id="title">PNEUMONIA PREDICTION USING DEEP NEURAL NETWORKS</p>
+      <p class="desc" id="subtitle">Upload your chest X-ray and the AI will predict if you're infected or not.</p>
+    </div>
+    <div id="container">
+    <form action="http://127.0.0.1:8000/uploader" method="POST" enctype="multipart/form-data">
+
+
+      <main class="main_full">
+        <div class="container">
+          <div class="panel">
+            <div class="button_outer">
+              <div class="btn_upload">
+                <input type="file" id="upload_file" name="file">
+                Upload your X-ray
+              </div>
+              <div class="processing_bar"></div>
+              <div class="success_box"></div>
+            </div>
+          </div>
+          <div class="error_msg"></div>
+          <div class="uploaded_file_view" id="uploaded_view">
+            <span class="file_remove">X</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+
+      <button id="submit" class="custom-btn btn-6" type="submit"><span>Submit</span></button>
+      
+      <p class="desc" id="subtitle">I've used 13 layered Convolution Neural Network (CNN) and have achieved accuracy of around 90%. </p>
+  
+        <p class="desc"> You can find the source code for the AI model and web app here. </p>
+
+
+
+      
+
+  
+    </form>
+
+
+
+    <script type="text/javascript" src="/static/index_js.js"></script>
+  
+  </div>
+
+  </body>
+
+</html>
+
