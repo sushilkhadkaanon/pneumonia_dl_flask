@@ -27,3 +27,5 @@ Here are images showing model's architecture and the screenshots of the web appl
 ![uploaded](https://user-images.githubusercontent.com/50844865/185704266-b29f58e6-fa6a-4495-a627-ff328c545275.png)
 ![negative](https://user-images.githubusercontent.com/50844865/185704273-b7ef61b4-e749-4679-b969-f5888feb109d.png)
 ![positive](https://user-images.githubusercontent.com/50844865/185704275-1db096e1-5747-45e9-96a9-5965665aa9c6.png)
+
+![model_arch](https://user-images.githubusercontent.com/50844865/185704649-cd1e564b-d7f1-4d49-86b0-dbbcbae53650.png)
