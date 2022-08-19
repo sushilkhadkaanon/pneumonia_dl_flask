@@ -1,6 +1,6 @@
 
 
-from email.mime import image
+
 from keras.models import model_from_json
 from flask import Flask, render_template, request
 import numpy as np
