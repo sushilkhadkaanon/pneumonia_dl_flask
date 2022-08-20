@@ -56,4 +56,4 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, debug=True)
+    app.run()
