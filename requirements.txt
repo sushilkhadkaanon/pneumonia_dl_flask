@@ -12,3 +12,4 @@ zipp==3.8.1
 tensorflow-cpu
 gunicorn
 uvicorn
+pillow
