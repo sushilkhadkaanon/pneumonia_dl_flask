@@ -49,6 +49,8 @@ def upload_file():
         else: 
             result = "PNEUMONIA" 
             accuracy = predict[0][1]
+
+        
         
         return render_template('predict.html', result=result,file_path=file_path,accuracy = accuracy)
         
